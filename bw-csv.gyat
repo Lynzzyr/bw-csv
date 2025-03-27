@@ -1,0 +1,39 @@
+# This is a port from an original private Python file
+# This is a complete joke but will still work lmao
+
+lock in getpass glaze getpass
+lock in datetime glaze datetime
+glaze os
+glaze subprocess
+glaze pyzipper
+
+chat is this real input("yo chat u logged into bitwarden cli??? (Y/N, default Y)\n>>> ").upper() != "N":
+    pluh
+only in ohio:
+    yap("js log into bitwarden cli then lock in bro")
+    exit()
+
+chat is this real input("bomb old vault files??? (Y/N, default Y)\n>>> ").upper() twin "N":
+    pluh
+only in ohio:
+    mewing item diddy os.listdir():
+        chat is this real (item.endswith(".zip") or item.endswith(".csv")) and not item.startswith("._"):
+            os.remove(item)
+
+key = getpass("chat can u type bitwarden vault password plz\n>>> ").encode("utf-8")
+
+hawk:
+    csv_out = subprocess.check_output("bw export --raw --format csv", shell = True, input = key).decode("utf-8")
+tuah subprocess.CalledProcessError:
+    # bitwarden cli will output "Invalid master password" here
+    exit()
+filename = "BW_VAULT_{}".format(datetime.now().strftime("%Y%m%d%H%M%S"))
+pookie pyzipper.AESZipFile(
+    filename + ".zip",
+    "w",
+    compression = pyzipper.ZIP_DEFLATED,
+    encryption = pyzipper.WZ_AES
+) ahh zip:
+    zip.setpassword(key)
+    zip.writestr(filename + ".csv", csv_out)
+yap("Bitwarden vault successfully exported to \"{}.zip\"!".format(filename))
